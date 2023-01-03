@@ -1,15 +1,24 @@
-<div class='bold-line'></div>
 <div class='container'>
   <div class='window'>
     <div class='overlay'></div>
     <div class='content'>
       <div class='welcome'>Login</div>
       <div class='input-fields'>
-        <input type='email' placeholder='Email' class='input-line full-width'>
-        <input type='password' placeholder='Password' class='input-line full-width'>
+        <input
+          type='email'
+          [formControl]="getLoginFormControls.email"
+          placeholder='Email'
+          class='input-line full-width'
+          [style.border-color]="getLoginFormControls.email.dirty && (getLoginFormControls.email.errors?.required || getLoginFormControls.email.errors?.email || getLoginFormControls.email.errors?.invalidLogin) ? 'red' : ''">
+        <input
+          type='password'
+          [formControl]="getLoginFormControls.password"
+          placeholder='Password'
+          class='input-line full-width'
+          [style.border-color]="getLoginFormControls.password.dirty && (getLoginFormControls.password.errors?.required || getLoginFormControls.email.errors?.invalidLogin) ? 'red' : ''">
       </div>
       <div>
-        <button class='ghost-round full-width'>Create Account</button>
+        <button class='ghost-round full-width' (click)="authenticationUser()"><mat-icon>trending_flat</mat-icon></button>
       </div>
     </div>
   </div>

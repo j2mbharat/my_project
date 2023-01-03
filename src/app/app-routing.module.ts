@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import("src/app/modules/users/users.module").then(m => m.UsersModule),
     canActivate: [AuthGuardGuard]
   },
-  { path: '**', redirectTo: 'auth' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

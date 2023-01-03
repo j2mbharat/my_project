@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from "@angular/forms"
+import { FormsModule } from "@angular/forms"
+import { MatIconModule } from "@angular/material/icon"
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatIconModule
   ]
 })
 export class AuthModule { }

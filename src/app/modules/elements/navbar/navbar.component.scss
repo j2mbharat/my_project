@@ -1,0 +1,112 @@
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  border-bottom: 1px solid #0000001a;
+}
+
+.navbar-navigation {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  width: 115px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: height 500ms, width 500ms;
+  transition-delay: 0s, 0.75s;
+
+}
+
+.navbar-navigation .navbar-user-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+
+.navbar-navigation .navbar-user-box .navbar-username {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-left: 15px;
+  word-break: break-all;
+}
+
+.navbar-navigation .navbar-user-box .navbar-image-box {
+  position: relative;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 10px;
+}
+
+.navbar-navigation .navbar-user-box .navbar-image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  padding: 0px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu li {
+  list-style: none;
+}
+
+.navbar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.navbar-menu li a ion-icon {
+  font-size: 1.5rem;
+}
+
+.navbar-menu li a:hover {
+  color: rgb(0, 49, 102);
+}
+
+.navbar-navigation.active {
+  width: 300px;
+  height: 165px;
+  transition: width 500ms, height 500ms;
+  transition-delay: 0s, 0.75s;
+}
+
+.navbar-navigation.active .navbar-user-box {
+  width: calc(100% - 60px);
+  transition-delay: 0s;
+}
+
+:host {
+  .user-tiles-close {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}

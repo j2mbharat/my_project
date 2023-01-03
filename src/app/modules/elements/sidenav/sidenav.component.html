@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="over" [ngClass]="opened ? 'sidenav-opened' : 'sidenav-colsed'">
+    <mat-nav-list>
+      <button (click)="handleSidenavToggle()"><mat-icon mat-list-icon>{{opened ? 'close' :
+          'dehaze'}}</mat-icon></button>
+      <mat-list-item routerLink="/users">
+        <mat-icon mat-list-icon>person_outline</mat-icon>
+        <h4 mat-line class="navigation-item-label">Users</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
