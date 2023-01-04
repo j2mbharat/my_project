@@ -15,4 +15,8 @@ export class LoginService {
     return this.httpService.post<IIlogin>(environment.API_Auth + 'login', loginInfo)
   }
 
+  public userLogout(): void {
+    localStorage.removeItem("Authorization")
+    localStorage.clear()
+  }
 }
