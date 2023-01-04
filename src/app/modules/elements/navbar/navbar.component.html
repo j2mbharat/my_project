@@ -8,8 +8,8 @@
     </div>
     <mat-icon class="user-tiles-close" mat-list-icon (click)="toggleuserMenu()">{{open ? 'close' : 'dehaze'}}</mat-icon>
     <ul class="navbar-menu">
-      <li><a> <mat-icon mat-list-icon>person_outline</mat-icon>Profile</a></li>
-      <li><a>Logout</a></li>
+      <li><a><mat-icon mat-list-icon>person_outline</mat-icon>Profile</a></li>
+      <li><a (click)="logOut()"><mat-icon mat-list-icon >power_settings_new</mat-icon>Logout</a></li>
     </ul>
   </div>
 </div>

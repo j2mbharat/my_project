@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, ViewChild, ElementRef } from '@angular/core';
-
+import { LoginService } from 'src/app/services/login.service';
+import { Router } from "@angular/router"
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
   public open!: boolean
 
-  constructor() { }
+  constructor(private loginServise: LoginService, private roterService: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,5 +23,8 @@ export class NavbarComponent implements OnInit {
     this.open = !this.open
     this.navigation?.nativeElement.classList.toggle('active')
   }
-
+  public logOut(): void {
+    this.loginServise.userLogout()
+    this.roterService.navigate(['auth'])
+  }
 }
