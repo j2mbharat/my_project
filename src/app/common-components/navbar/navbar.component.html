@@ -1,0 +1,15 @@
+<div class="navbar-container">
+  <div class="navbar-navigation" #navigation>
+    <div class="navbar-user-box">
+      <div class="navbar-image-box">
+        <img src="https://i.pinimg.com/originals/7d/34/d9/7d34d9d53640af5cfd2614c57dfa7f13.png" alt="avatar">
+      </div>
+      <p class="navbar-username">William Joe</p>
+    </div>
+    <mat-icon class="user-tiles-close" mat-list-icon (click)="toggleuserMenu()">{{open ? 'close' : 'dehaze'}}</mat-icon>
+    <ul class="navbar-menu">
+      <li><a><mat-icon mat-list-icon>person_outline</mat-icon>Profile</a></li>
+      <li><a (click)="logOut()"><mat-icon mat-list-icon >power_settings_new</mat-icon>Logout</a></li>
+    </ul>
+  </div>
+</div>

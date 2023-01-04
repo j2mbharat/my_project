@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatSnackBar, MatSnackBarRef, MAT_SNACK_BAR_DATA } from "@angular/material/snack-bar"
+import { MatSnackBar, MatSnackBarRef, MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-snackbar',
@@ -7,7 +7,6 @@ import { MatSnackBar, MatSnackBarRef, MAT_SNACK_BAR_DATA } from "@angular/materi
   styleUrls: ['./snackbar.component.scss']
 })
 export class SnackbarComponent implements OnInit {
-
   constructor(
     private snackBarService: MatSnackBar,
     private matSnackBarRef: MatSnackBarRef<SnackbarComponent>,
@@ -20,4 +19,5 @@ export class SnackbarComponent implements OnInit {
   public closeSnackBar(): void {
     this.snackBarService.dismiss()
   }
+
 }
