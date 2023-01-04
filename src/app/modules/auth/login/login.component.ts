@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { FormGroup, FormControl, Validators } from "@angular/forms"
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
-import { SnackbarComponent } from '../../elements/snackbar/snackbar.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from 'src/app/common-components/snackbar/snackbar.component';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
