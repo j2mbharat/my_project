@@ -12,7 +12,11 @@ import { SnackbarComponent } from 'src/app/common-components/snackbar/snackbar.c
 })
 export class LoginComponent implements OnInit {
 
-  public loginForm: FormGroup
+  public loginForm: FormGroup;
+  show = false;
+
+  public password : any = {
+  }
 
   public snackBarConfig: any = {
     duration: 3000,
@@ -33,6 +37,16 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     localStorage.removeItem("Authorization")
+    this.password = 'password';
+  }
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
   }
 
   public authenticationUser() {
