@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  API_Auth: "http://restapi.adequateshop.com/api/authaccount/"
 };
