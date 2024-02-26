@@ -4,14 +4,29 @@ export interface ILogin {
 }
 
 export interface IIlogin {
-  code: number,
+  status: number,
   message: string,
-  data: IData
+  data: IUser
+  token: {
+    token: string,
+    refreshToken: string
+  }
 }
 
-interface IData {
-  Id: number,
-  Name: string,
-  Email: string,
-  Token: string
+
+
+export class IUser {
+  userId: number
+  username: string
+  firstName: string
+  lastName: string
+  email: string
+
+  constructor() {
+    this.userId = 0
+    this.username = ""
+    this.firstName = ""
+    this.lastName = ""
+    this.email = ""
+  }
 }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_Auth: "http://restapi.adequateshop.com/api/authaccount/"
+  // API_Auth: "http://restapi.adequateshop.com/api/authaccount/"
+  API_Auth: "https://localhost:7292/api/"
 };
 
 /*
